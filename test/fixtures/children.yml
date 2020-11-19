@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user_id: 1
+  name: MyString
+  birthday: 2020-11-19
+  age: 1
+
+two:
+  user_id: 1
+  name: MyString
+  birthday: 2020-11-19
+  age: 1

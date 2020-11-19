@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  children_id: 1
+  date: 2020-11-19
+  time: 2020-11-19 03:56:59
+  type: 
+  duration: MyString
+  amount: 1
+
+two:
+  children_id: 1
+  date: 2020-11-19
+  time: 2020-11-19 03:56:59
+  type: 
+  duration: MyString
+  amount: 1

@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user_id: 1
+  date: 2020-11-19
+  time: 2020-11-19 04:00:12
+  image: MyString
+  content: MyString
+
+two:
+  user_id: 1
+  date: 2020-11-19
+  time: 2020-11-19 04:00:12
+  image: MyString
+  content: MyString
