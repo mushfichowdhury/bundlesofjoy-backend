@@ -46,6 +46,6 @@ class DiapersController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def diaper_params
-      params.require(:diaper).permit(:children_id, :date, :time, :quality, :color)
+      params.require(:diaper).permit(:child_id, :wet, :solid, :color)
     end
 end

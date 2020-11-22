@@ -46,6 +46,6 @@ class NapsController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def nap_params
-      params.require(:nap).permit(:children_id, :date, :time, :duration)
+      params.require(:nap).permit(:child_id, :duration)
     end
 end

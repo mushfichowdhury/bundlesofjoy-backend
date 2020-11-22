@@ -20,25 +20,23 @@ ActiveRecord::Schema.define(version: 2020_11_19_090012) do
     t.string "name"
     t.date "birthday"
     t.integer "age"
+    t.string "password"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "diapers", force: :cascade do |t|
-    t.integer "children_id"
-    t.date "date"
-    t.time "time"
-    t.string "quality"
+    t.integer "child_id"
+    t.boolean "wet"
+    t.boolean "solid"
     t.string "color"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "feedings", force: :cascade do |t|
-    t.integer "children_id"
-    t.date "date"
-    t.time "time"
-    t.string "type"
+    t.integer "child_id"
+    t.string "method"
     t.string "duration"
     t.integer "amount"
     t.datetime "created_at", precision: 6, null: false
@@ -47,8 +45,6 @@ ActiveRecord::Schema.define(version: 2020_11_19_090012) do
 
   create_table "journal_entries", force: :cascade do |t|
     t.integer "user_id"
-    t.date "date"
-    t.time "time"
     t.string "image"
     t.string "content"
     t.datetime "created_at", precision: 6, null: false
@@ -56,9 +52,7 @@ ActiveRecord::Schema.define(version: 2020_11_19_090012) do
   end
 
   create_table "naps", force: :cascade do |t|
-    t.integer "children_id"
-    t.date "date"
-    t.time "time"
+    t.integer "child_id"
     t.string "duration"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
