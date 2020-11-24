@@ -1,5 +1,7 @@
-class JournalEntriesController < ApplicationController
+class Api::V1::JournalEntriesController < ApplicationController
   before_action :set_journal_entry, only: [:show, :update, :destroy]
+  skip_before_action :authorized
+
 
   # GET /journal_entries
   def index

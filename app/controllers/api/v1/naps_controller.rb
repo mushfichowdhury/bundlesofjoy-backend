@@ -1,5 +1,6 @@
-class NapsController < ApplicationController
+class Api::V1::NapsController < ApplicationController
   before_action :set_nap, only: [:show, :update, :destroy]
+  skip_before_action :authorized
 
   # GET /naps
   def index

@@ -1,5 +1,7 @@
-class DiapersController < ApplicationController
+class Api::V1::DiapersController < ApplicationController
   before_action :set_diaper, only: [:show, :update, :destroy]
+  skip_before_action :authorized
+
 
   # GET /diapers
   def index

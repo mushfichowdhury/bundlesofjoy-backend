@@ -1,5 +1,7 @@
-class ChildrenController < ApplicationController
+class Api::V1::ChildrenController < ApplicationController
   before_action :set_child, only: [:show, :update, :destroy]
+  skip_before_action :authorized
+
 
   # GET /children
   def index

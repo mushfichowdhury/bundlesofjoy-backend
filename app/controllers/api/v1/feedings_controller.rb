@@ -1,11 +1,13 @@
-class FeedingsController < ApplicationController
+class Api::V1::FeedingsController < ApplicationController
   before_action :set_feeding, only: [:show, :update, :destroy]
+  skip_before_action :authorized
+
 
   # GET /feedings
   def index
     @feedings = Feeding.all
 
-    render json: @feedings, include: :child
+    render json: @feedings
   end
 
   # GET /feedings/1
