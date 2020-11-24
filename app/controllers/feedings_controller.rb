@@ -5,7 +5,7 @@ class FeedingsController < ApplicationController
   def index
     @feedings = Feeding.all
 
-    render json: @feedings
+    render json: @feedings, include: :child
   end
 
   # GET /feedings/1
