@@ -2,7 +2,7 @@ class CreateFeedings < ActiveRecord::Migration[6.0]
   def change
     create_table :feedings do |t|
       t.integer :child_id
-      t.string :method
+      t.string :feeding_method
       t.string :duration
       t.integer :amount
 

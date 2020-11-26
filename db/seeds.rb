@@ -23,26 +23,26 @@ Child.create(user_id: 1, name: "Sean", birthday: "2000-11-30", age: 18, password
 Child.create(user_id: 2, name: "Hasibul", birthday: "1995-07-07", age: 25, password: "abc456")
 
 # diapers
-Diaper.create(child_id: 1, wet: true, solid: false, color: "brown")
-Diaper.create(child_id: 1, wet: false, solid: true, color: "brown")
-Diaper.create(child_id: 1, wet: false, solid: true, color: "brown")
-Diaper.create(child_id: 1, wet: false, solid: true, color: "green")
-Diaper.create(child_id: 1, wet: true, solid: false, color: "yellow")
-Diaper.create(child_id: 2, wet: false, solid: true, color: "brown")
-Diaper.create(child_id: 2, wet: true, solid: false, color: "brown")
-Diaper.create(child_id: 2, wet: true, solid: false, color: "dark brown")
-Diaper.create(child_id: 2, wet: true, solid: false, color: "brown")
-Diaper.create(child_id: 2, wet: true, solid: false, color: "brown")
-Diaper.create(child_id: 2, wet: false, solid: true, color: "yellow")
-Diaper.create(child_id: 2, wet: false, solid: true, color: "brown")
+Diaper.create(child_id: 1, texture: "soft", color: "olive")
+Diaper.create(child_id: 1, texture: "watery", color: "black")
+Diaper.create(child_id: 1, texture: "pellets", color: "red")
+Diaper.create(child_id: 1, texture: "pellets", color: "dark green")
+Diaper.create(child_id: 1, texture: "hard", color: "yellow")
+Diaper.create(child_id: 2, texture: "watery", color: "dark yellow")
+Diaper.create(child_id: 2, texture: "hard", color: "black")
+Diaper.create(child_id: 2, texture: "hard", color: "dark yellow")
+Diaper.create(child_id: 2, texture: "firm", color: "orange")
+Diaper.create(child_id: 2, texture: "firm", color: "white")
+Diaper.create(child_id: 2, texture: "soft", color: "yellow")
+Diaper.create(child_id: 2, texture: "soft", color: "dark green")
 
 
 
 # feedings
-Feeding.create(child_id: 1, method: "breast", duration: "10 minutes", amount: 4)
-Feeding.create(child_id: 1, method: "breast", duration: "4 minutes", amount: 7)
-Feeding.create(child_id: 2, method: "formula", duration: "6 minutes", amount: 9)
-Feeding.create(child_id: 2, method: "formula", duration: "8 minutes", amount: 3)
+Feeding.create(child_id: 1, feeding_method: "breast", duration: "10 minutes", amount: 4)
+Feeding.create(child_id: 1, feeding_method: "breast", duration: "4 minutes", amount: 7)
+Feeding.create(child_id: 2, feeding_method: "formula", duration: "6 minutes", amount: 9)
+Feeding.create(child_id: 2, feeding_method: "formula", duration: "8 minutes", amount: 3)
 
 # naps
 Nap.create(child_id: 1, duration: "30 minutes")

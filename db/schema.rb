@@ -27,8 +27,7 @@ ActiveRecord::Schema.define(version: 2020_11_19_090012) do
 
   create_table "diapers", force: :cascade do |t|
     t.integer "child_id"
-    t.boolean "wet"
-    t.boolean "solid"
+    t.string "texture"
     t.string "color"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -36,7 +35,7 @@ ActiveRecord::Schema.define(version: 2020_11_19_090012) do
 
   create_table "feedings", force: :cascade do |t|
     t.integer "child_id"
-    t.string "method"
+    t.string "feeding_method"
     t.string "duration"
     t.integer "amount"
     t.datetime "created_at", precision: 6, null: false

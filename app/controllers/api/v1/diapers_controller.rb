@@ -48,6 +48,6 @@ class Api::V1::DiapersController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def diaper_params
-      params.require(:diaper).permit(:child_id, :wet, :solid, :color)
+      params.require(:diaper).permit(:child_id, :texture, :color)
     end
 end
