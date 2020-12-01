@@ -20,7 +20,7 @@ class Api::V1::DiapersController < ApplicationController
     @diaper = Diaper.new(diaper_params)
 
     if @diaper.save
-      render json: @diaper, status: :created, location: @diaper
+      render json: @diaper, status: :created
     else
       render json: @diaper.errors, status: :unprocessable_entity
     end
@@ -48,6 +48,6 @@ class Api::V1::DiapersController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def diaper_params
-      params.require(:diaper).permit(:child_id, :texture, :color)
+      params.permit(:child_id, :texture, :color, :image)
     end
 end

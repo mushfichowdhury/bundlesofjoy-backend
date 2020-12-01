@@ -3,7 +3,7 @@ class CreateFeedings < ActiveRecord::Migration[6.0]
     create_table :feedings do |t|
       t.integer :child_id
       t.string :feeding_method
-      t.string :duration
+      t.string :food
       t.integer :amount
 
       t.timestamps

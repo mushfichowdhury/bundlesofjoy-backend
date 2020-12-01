@@ -5,7 +5,7 @@ class CreateChildren < ActiveRecord::Migration[6.0]
       t.string :name
       t.date :birthday
       t.integer :age
-      t.string :password
+      t.string :password_digest
 
       t.timestamps
     end

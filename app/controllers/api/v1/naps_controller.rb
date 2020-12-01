@@ -19,7 +19,8 @@ class Api::V1::NapsController < ApplicationController
     @nap = Nap.new(nap_params)
 
     if @nap.save
-      render json: @nap, status: :created, location: @nap
+      render json: @nap, status: :created
+      # location: api_v1_nap_url(@nap)
     else
       render json: @nap.errors, status: :unprocessable_entity
     end
@@ -47,6 +48,6 @@ class Api::V1::NapsController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def nap_params
-      params.require(:nap).permit(:child_id, :duration)
+      params.permit(:child_id, :duration)
     end
 end

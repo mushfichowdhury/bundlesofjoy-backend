@@ -8,6 +8,7 @@ Rails.application.routes.draw do
       resources :children
       resources :users
       post '/login', to: 'auth#create'
+      post '/childlogin', to: 'auth#createchild'
       get '/profile', to: 'users#profile'
     end
   end

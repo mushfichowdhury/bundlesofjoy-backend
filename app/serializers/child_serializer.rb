@@ -1,3 +1,3 @@
 class ChildSerializer < ActiveModel::Serializer
-  attributes :id, :user_id, :birthday, :age, :password, :created_at, :updated_at
+  attributes :id, :user_id, :name, :birthday, :age, :created_at, :updated_at
 end

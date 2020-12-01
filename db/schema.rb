@@ -20,7 +20,7 @@ ActiveRecord::Schema.define(version: 2020_11_19_090012) do
     t.string "name"
     t.date "birthday"
     t.integer "age"
-    t.string "password"
+    t.string "password_digest"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -29,6 +29,7 @@ ActiveRecord::Schema.define(version: 2020_11_19_090012) do
     t.integer "child_id"
     t.string "texture"
     t.string "color"
+    t.string "image"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -36,7 +37,7 @@ ActiveRecord::Schema.define(version: 2020_11_19_090012) do
   create_table "feedings", force: :cascade do |t|
     t.integer "child_id"
     t.string "feeding_method"
-    t.string "duration"
+    t.string "food"
     t.integer "amount"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -44,6 +45,7 @@ ActiveRecord::Schema.define(version: 2020_11_19_090012) do
 
   create_table "journal_entries", force: :cascade do |t|
     t.integer "user_id"
+    t.string "title"
     t.string "image"
     t.string "content"
     t.datetime "created_at", precision: 6, null: false

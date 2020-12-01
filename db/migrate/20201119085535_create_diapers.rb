@@ -4,6 +4,7 @@ class CreateDiapers < ActiveRecord::Migration[6.0]
       t.integer :child_id
       t.string :texture
       t.string :color
+      t.string :image
 
       t.timestamps
     end

@@ -20,7 +20,7 @@ class Api::V1::FeedingsController < ApplicationController
         @feeding = Feeding.new(feeding_params)
 
         if @feeding.save
-        render json: @feeding, status: :created, location: @feeding
+        render json: @feeding, status: :created
         else
         render json: @feeding.errors, status: :unprocessable_entity
         end
@@ -48,6 +48,6 @@ class Api::V1::FeedingsController < ApplicationController
 
         # Only allow a trusted parameter "white list" through.
         def feeding_params
-        params.require(:feeding).permit(:child_id, :feeding_method, :duration, :amount)
+        params.permit(:child_id, :feeding_method, :food, :amount)
         end
 end
