@@ -38,6 +38,7 @@ class Api::V1::DiapersController < ApplicationController
   # DELETE /diapers/1
   def destroy
     @diaper.destroy
+    render json: @diaper
   end
 
   private

@@ -38,6 +38,7 @@ class Api::V1::NapsController < ApplicationController
   # DELETE /naps/1
   def destroy
     @nap.destroy
+    render json: @nap
   end
 
   private

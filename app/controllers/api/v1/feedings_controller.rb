@@ -38,6 +38,7 @@ class Api::V1::FeedingsController < ApplicationController
     # DELETE /feedings/1
     def destroy
         @feeding.destroy
+        render json: @feeding
     end
 
     private
