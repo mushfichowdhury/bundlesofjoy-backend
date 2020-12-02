@@ -20,7 +20,7 @@ class Api::V1::JournalEntriesController < ApplicationController
     @journal_entry = JournalEntry.new(journal_entry_params)
 
     if @journal_entry.save
-      render json: @journal_entry, status: :created, location: @journal_entry
+      render json: @journal_entry, status: :created
     else
       render json: @journal_entry.errors, status: :unprocessable_entity
     end
